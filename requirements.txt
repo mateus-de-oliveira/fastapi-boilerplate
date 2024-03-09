@@ -25,7 +25,9 @@ dill==0.3.8
 distlib==0.3.8
 distro==1.7.0
 distro-info==1.1+ubuntu0.2
+enum34==1.1.10
 exceptiongroup==1.2.0
+facebook_business==19.0.0
 fastapi==0.110.0
 filelock==3.13.1
 Flask==3.0.0
