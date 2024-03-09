@@ -1,16 +1,16 @@
 # Configuração do Ambiente de Desenvolvimento
 
-Este boilerplate inclui tudo o que você precisa para começar a trabalhar em uma aplicação FastAPI com qualidade e padronização de código asseguradas pelo Pylint, com as configurações de pre-commit já estabelecidas. Siga os passos abaixo para configurar seu ambiente virtual e instalar todas as dependências necessárias.
+Este boilerplate já vem preparado com tudo o que você precisa para começar a trabalhar em uma aplicação FastAPI, assegurando qualidade e padronização de código com o Pylint e Pre-Commit. Aqui estão as instruções para configurar seu ambiente e instalar as dependências.
 
 ## 🐍 Configuração do Ambiente Virtual
 
-Para isolar suas dependências e manter a consistência entre os ambientes de desenvolvimento, recomendamos a utilização de um ambiente virtual Python. Veja como configurá-lo:
+Isolar as dependências do projeto em um ambiente virtual é essencial. Siga os passos abaixo para configurá-lo:
 
-1. **Instale o Virtualenv, se ainda não o tiver:**
+1. **Se ainda não tiver o Virtualenv instalado:**
     ```bash
     pip install virtualenv
     ```
-2. **Na raiz do projeto, crie seu ambiente virtual:**
+2. **Na raiz do projeto, crie o ambiente virtual:**
     ```bash
     virtualenv venv
     ```
@@ -26,28 +26,38 @@ Para isolar suas dependências e manter a consistência entre os ambientes de de
 
 ## 📦 Instalando Dependências
 
-Com o ambiente virtual ativo, instale as dependências do projeto contidas no arquivo `requirements.txt`.
+Ative seu ambiente virtual para instalar as dependências do `requirements.txt`.
 
-1. **Instale as dependências:**
+1. **Com o ambiente virtual ativo, instale as dependências:**
     ```bash
     pip install -r requirements.txt
     ```
 
-Agora você está pronto para começar a desenvolver com todas as ferramentas e extensões necessárias já configuradas no template! 🚀
+## 🔗 Configurando o Pre-Commit
+
+Com as dependências instaladas, configure o Pre-Commit para automatizar a checagem de código.
+
+1. **Execute o Pre-Commit:**
+    ```bash
+    pre-commit install
+    ```
+
+Este comando configurará o Pre-Commit para ser executado antes de cada commit, garantindo que seu código esteja alinhado com as regras definidas.
 
 ## 🔨 Uso
 
-Para começar a trabalhar em sua aplicação FastAPI, assegure-se de que o ambiente virtual esteja ativo e utilize o Uvicorn para rodar o servidor:
+Para iniciar o desenvolvimento, ative o ambiente virtual e inicie o servidor com o Uvicorn:
 
-1. **Ative o ambiente virtual:**
+1. **Ative o ambiente virtual, se necessário:**
     ```bash
-    # Se ainda não estiver ativo
     source venv/bin/activate  # Linux/Mac
     .\venv\Scripts\activate  # Windows
     ```
-2. **Execute a aplicação:**
+2. **Inicie o servidor FastAPI:**
     ```bash
     uvicorn src.main:app --reload
     ```
 
-O comando acima assume que sua aplicação FastAPI está definida no arquivo `src/main.py`. A flag `--reload` é útil durante o desenvolvimento, pois permite que o servidor reinicie automaticamente após mudanças no código.
+O arquivo `src/main.py` deve conter a aplicação FastAPI. A flag `--reload` faz com que o servidor reinicie automaticamente ao detectar alterações no código, facilitando o desenvolvimento.
+
+Agora, com o ambiente configurado e o servidor rodando, você pode começar a codificar com confiança, sabendo que suas contribuições estarão consistentes e de qualidade!
