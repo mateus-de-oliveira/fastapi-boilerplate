@@ -5,7 +5,3 @@ class ExampleSchema(BaseModel):
     id: Optional[int] = None
     name: str
     age: int
-
-    class Config:
-        orm_mode = True
-        
