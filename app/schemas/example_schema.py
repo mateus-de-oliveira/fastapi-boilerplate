@@ -1,6 +1,5 @@
-#faça um esquema de exemplo utilizando o pydantic
-from pydantic import BaseModel
 from typing import Optional
+from pydantic import BaseModel
 
 class ExampleSchema(BaseModel):
     id: Optional[int] = None
